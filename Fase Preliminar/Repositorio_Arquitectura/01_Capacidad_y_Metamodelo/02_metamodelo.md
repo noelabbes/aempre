@@ -11,6 +11,7 @@ Establece el lenguaje común y las relaciones estructurales entre los conceptos 
 ### Capa de Datos
 *   **Entidad de Validación:** Contiene el `Token_de_Verificacion`, `Score_de_Similitud_Biometrica` y `Timestamp`.
 *   **Vector Biométrico:** Hash generado en el borde (Edge) que contiene minucias y metadatos de vida (Liveness).
+*   **Activo RENTESEG:** Identificadores únicos como el `IMEI` del dispositivo, `Clave_Temporal_Activacion`, `DNI`, `Nombres_y_Apellidos`.
 
 ### Capa de Aplicación
 *   **Servicio de Fachada (API Gateway):** Punto de entrada para validación de esquemas y rate limiting.

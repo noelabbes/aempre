@@ -30,5 +30,3 @@
 * *6.1. Registro de Decisiones (Decision Log):* Historial de decisiones arquitectónicas (ADRs).
 * *6.2. Evaluaciones de Cumplimiento:* Auditorías sobre SLAs y conformidad normativa.
 * *6.3. Medición de Rendimiento:* KPIs críticos (SLA de bloqueo < 1 hora).
-
-Esta estructura nos da un esqueleto robusto, ordenado y libre de fricciones. Cuando estés listo, indícame por cuál sección o subtítulo prefieres que comencemos a desarrollar el contenido a profundidad.

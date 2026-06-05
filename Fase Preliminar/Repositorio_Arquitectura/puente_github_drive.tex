@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2.54cm]{geometry} % Margen APA (1 pulgada)
+\usepackage{times} % Fuente Times New Roman (común en APA)
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+% Configuración de colores
+\definecolor{osiptelblue}{RGB}{0, 75, 135}
+\definecolor{graytable}{RGB}{240, 240, 240}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black, % APA prefiere negro para impresión, pero mantendremos azul para interactividad
+    urlcolor=osiptelblue,
+    pdftitle={Repositorio de Arquitectura Empresarial - SIPBA},
+}
+
+\doublespacing % Interlineado doble APA
+
+\begin{document}
+
+% --- CARÁTULA ESTILO APA 7 ---
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Large \textbf{Repositorio de Arquitectura Empresarial: Proyecto SIPBA - Sistema de Prevención del Fraude de Identidad Móvil y SIM Swapping} \par}
+    \vspace{2cm}
+    {\large Noel Abbes \par}
+    \vspace{1cm}
+    {Facultad de Ingeniería y Arquitectura \\ Universidad Tecnológica del Perú \par} % Ajustado a contexto académico común
+    \vspace{1cm}
+    {Arquitectura Empresarial \par}
+    \vspace{1cm}
+    {Profesor del Curso \par}
+    \vspace{1cm}
+    {05 de junio de 2026 \par}
+\end{titlepage}
+
+\newpage
+\pagenumbering{arabic}
+\fancyhf{}
+\rhead{\thepage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+
+% --- CONTROL DE VERSIONES (Adaptado a tabla APA) ---
+\section*{Control de Versiones}
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{l l l X}
+        \toprule
+        \textbf{Versión} & \textbf{Fecha} & \textbf{Autor} & \textbf{Descripción} \\
+        \midrule
+        1.0 & 05/06/2026 & Arquitectura Empresarial & Migración de activos y línea base al repositorio de GitHub. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\vspace{0.5cm}
+
+% --- PROPÓSITO ---
+\section{Propósito y Enlace de Gobernanza}
+El presente documento constituye el Índice Maestro y el Punto de Acceso Oficial al Repositorio de Arquitectura del Proyecto SIPBA de OSIPTEL. Siguiendo los principios de agilidad y gobernanza tecnológica viva (\textit{Architecture-as-Code}), todos los activos arquitectónicos, diagramas de metamodelos, estándares tecnológicos y registros de decisiones se encuentran bajo control de versiones y almacenamiento seguro en el repositorio central de GitHub. Este documento sirve como puente metodológico alineado a TOGAF para auditar y navegar dichos componentes.
+
+\vspace{0.5cm}
+\begin{center}
+    \href{https://github.com/noelabbes/aempre/tree/main/Fase\%20Preliminar/Repositorio_Arquitectura}{\textbf{Acceder al Repositorio Central en GitHub}}
+\end{center}
+\vspace{0.5cm}
+
+% --- MATRIZ DE MAPEO ---
+\section{Matriz de Mapeo Estructural (TOGAF $\leftrightarrow$ GitHub)}
+La siguiente tabla vincula las secciones requeridas por la arquitectura empresarial con el contenido técnico desarrollado en el repositorio digital.
+
+\begin{table}[h!]
+    \centering
+    \small
+    \singlespacing % Tablas suelen ir con espacio simple para legibilidad
+    \begin{tabularx}{\textwidth}{p{4.5cm} p{4.5cm} X}
+        \toprule
+        \textbf{Sección TOGAF} & \textbf{Componente SIPBA} & \textbf{Ubicación en GitHub} \\
+        \midrule
+        \textbf{1. Propósito} & Índice y Gobernanza & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/00_index.md}{00\_index.md} \\
+        \rowcolor{graytable}
+        \textbf{2. Capacidad y Metamodelo} & Roles y Relaciones & \href{https://github.com/noelabbes/aempre/tree/main/Fase\%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo}{Carpeta 01} \\
+        \quad 2.1 Capacidad AE & Roles críticos & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo/01_capacidad.md}{01\_capacidad.md} \\
+        \rowcolor{graytable}
+        \quad 2.2 Metamodelo AE & Entidades y Eventos & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo/02_metamodelo.md}{02\_metamodelo.md} \\
+        \textbf{3. Marco de Arquitectura} & Visión y SIB & \href{https://github.com/noelabbes/aempre/tree/main/Fase\%20Preliminar/Repositorio_Arquitectura/02_Marco_Arquitectura}{Carpeta 02} \\
+        \rowcolor{graytable}
+        \quad 3.1 Visión AS-IS / TO-BE & Gap Analysis & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/02_Marco_Arquitectura/01_vision.md}{01\_vision.md} \\
+        \quad 3.2 Base de Estándares & Reglas de Negocio/Datos & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/02_Marco_Arquitectura/02_estandares.md}{02\_estandares.md} \\
+        \rowcolor{graytable}
+        \textbf{4. Paisaje de Arquitectura} & EDA y Referencias & \href{https://github.com/noelabbes/aempre/tree/main/Fase\%20Preliminar/Repositorio_Arquitectura/03_Paisaje_y_Referencia}{Carpeta 03} \\
+        \quad 4.1 Paisaje Arq. & Flujos SIPBA-PNP & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/03_Paisaje_y_Referencia/01_paisaje.md}{01\_paisaje.md} \\
+        \rowcolor{graytable}
+        \quad 4.2 Arq. de Referencia & DL 1738 & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/03_Paisaje_y_Referencia/02_referencia.md}{02\_referencia.md} \\
+        \textbf{5. Registro de Gobernanza} & Decisiones y KPIs & \href{https://github.com/noelabbes/aempre/tree/main/Fase\%20Preliminar/Repositorio_Arquitectura/04_Gobernanza}{Carpeta 04} \\
+        \rowcolor{graytable}
+        \quad 5.1 Log de Decisiones & ADR: API Gateway & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/04_Gobernanza/01_decisiones.md}{01\_decisiones.md} \\
+        \quad 5.2 Métricas e Indicadores & SLAs y Gaps & \href{https://github.com/noelabbes/aempre/blob/main/Fase\%20Preliminar/Repositorio_Arquitectura/04_Gobernanza/02_metricas.md}{02\_metricas.md} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\end{document}
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\end{document}

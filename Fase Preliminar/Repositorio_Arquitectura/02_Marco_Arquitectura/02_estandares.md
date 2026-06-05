@@ -21,6 +21,12 @@ Para garantizar seguridad y eficiencia, el intercambio de datos sigue este esque
 *   `ID_Dispositivo_Captura`: Trazabilidad del hardware utilizado.
 *   `Geolocalización`: Coordenadas de la transacción.
 
+### 2.2. Entidades RENTESEG
+El sistema manejará los siguientes campos obligatorios para la plataforma RENTESEG:
+*   **Identificadores de Dispositivo:** `IMEI` (International Mobile Equipment Identity).
+*   **Credenciales Temporales:** `Clave_Temporal_Activacion` (para procesos de alta).
+*   **Identidad del Titular:** `DNI`, `Nombre_y_Apellido`.
+
 ## 3. Estándares de Aplicación (Application Standards)
 
 ### 3.1. Patrón de Fachada (API Gateway)
