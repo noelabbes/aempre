@@ -30,8 +30,10 @@ Esta secuencia de diapositivas está diseñada para una exposición de nivel dir
 ## 2. Artefactos Pendientes de Desarrollo
 Para alcanzar el 100% de cumplimiento con la asignación del profesor, se deben desarrollar los siguientes elementos en el repositorio:
 
-### Fase Preliminar (Ajustes menores)
-*   **Principios de Arquitectura:** Documento formal con los 5-10 principios rectores de la AE de Osiptel (ej. "Los datos son un activo compartido").
+### Fase Preliminar (Completada)
+*   [x] **Principios de Arquitectura:** Documento formal con los 5 principios rectores (`03_principios.md`): Seguridad, Privacidad, Interoperabilidad, Cooperación y Rendimiento.
+*   [x] **Capacidad y Metamodelo:** Definición de roles y estándares de gobernanza (`01_capacidad.md`, `02_metamodelo.md`).
+*   [x] **Repositorio GitHub:** Estructura de carpetas y control de versiones operativo.
 
 ### Fase A: Visión de Arquitectura
 *   **Statement of Architecture Work (SoAW):** El contrato de arquitectura. Define alcance, hitos, presupuesto estimado y gobernanza del proyecto.

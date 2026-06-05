@@ -31,10 +31,12 @@ Este documento contiene el contenido resumido para cada diapositiva de la presen
 
 ### Slide 05: Fase Preliminar: Principios de Arquitectura
 *   **Principios Rectores:**
-    1. **Seguridad por Diseño:** La protección de datos es nativa.
-    2. **Interoperabilidad:** Conexión fluida entre PNP, RENIEC y Operadoras.
-    3. **Los datos son un Activo Compartido.**
-*   **⚠️ ESTADO: EN DESARROLLO.** Los principios están definidos pero el documento formal está en proceso de redacción.
+    1. **Seguridad y No Repudio:** La seguridad sobre la agilidad comercial.
+    2. **Privacidad por Diseño:** Custodia federada (RENIEC) y protección de datos.
+    3. **Interoperabilidad:** APIs estándar (mTLS, REST) para operadoras.
+    4. **Cooperación:** Flujo de información en tiempo real con PNP.
+    5. **Eficiencia:** Latencia de validación menor a 3 segundos.
+*   **Contenido:** Los 5 pilares innegociables que rigen el SIPBA.
 
 ### Slide 06: Fase A (Visión): Modelo de Motivación (BMM)
 *   **Influenciadores:** Crimen organizado, Latencia de 24h, Presión Ciudadana.

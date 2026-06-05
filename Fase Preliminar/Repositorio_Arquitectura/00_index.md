@@ -5,6 +5,7 @@ Este documento sirve como el índice central del Repositorio de Arquitectura, co
 ## 1. Capacidad y Metamodelo de Arquitectura
 *   [Capacidad de Arquitectura (Roles y Procesos)](01_Capacidad_y_Metamodelo/01_capacidad.md)
 *   [Metamodelo de Arquitectura (Entidades y Relaciones)](01_Capacidad_y_Metamodelo/02_metamodelo.md)
+*   [Principios de Arquitectura (Reglas de Diseño)](01_Capacidad_y_Metamodelo/03_principios.md)
 
 ## 2. Marco de Arquitectura (Architecture Framework)
 *   [Visión de Arquitectura (AS-IS / TO-BE)](02_Marco_Arquitectura/01_vision.md)
