@@ -10,7 +10,8 @@ Este documento sirve como el índice central del Repositorio de Arquitectura, co
 ## 2. Marco de Arquitectura (Architecture Framework)
 *   [Visión de Arquitectura (AS-IS / TO-BE)](02_Marco_Arquitectura/01_vision.md)
 *   [Modelo de Motivación de Negocio (BMM)](02_Marco_Arquitectura/02_bmm.md)
-*   [Base de Información de Estándares (SIB)](02_Marco_Arquitectura/02_estandares.md)
+*   [Mapa de Stakeholders (Interesados)](02_Marco_Arquitectura/03_stakeholders.md)
+*   [Base de Información de Estándares (SIB)](02_Marco_Arquitectura/04_estandares.md)
 
 ## 3. Paisaje y Arquitecturas de Referencia
 *   [Paisaje de Arquitectura (Landscape)](03_Paisaje_y_Referencia/01_paisaje.md)

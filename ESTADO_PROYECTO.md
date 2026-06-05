@@ -35,9 +35,9 @@ Para alcanzar el 100% de cumplimiento con la asignación del profesor, se deben 
 *   [x] **Capacidad y Metamodelo:** Definición de roles y estándares de gobernanza (`01_capacidad.md`, `02_metamodelo.md`).
 *   [x] **Repositorio GitHub:** Estructura de carpetas y control de versiones operativo.
 
-### Fase A: Visión de Arquitectura
-*   **Statement of Architecture Work (SoAW):** El contrato de arquitectura. Define alcance, hitos, presupuesto estimado y gobernanza del proyecto.
-*   **Mapa de Stakeholders (Matriz Poder/Interés):** Un diagrama o tabla que detalle cómo se gestionará a los actores externos.
+### Fase A: Visión de Arquitectura (Casi completada)
+*   [x] **Mapa de Stakeholders (Matriz Poder/Interés):** Documentada con niveles de compromiso y vistas requeridas por actor (RENIEC, PNP, Operadoras).
+*   **Statement of Architecture Work (SoAW):** Pendiente (Contrato de arquitectura y alcance formal).
 
 ### Fase B: Arquitectura de Negocio (Fase Crítica - Pendiente)
 *   **Catálogo de Organización:** Descripción de las unidades de Osiptel que operarán el SIPBA (Matriz RACI extendida).
