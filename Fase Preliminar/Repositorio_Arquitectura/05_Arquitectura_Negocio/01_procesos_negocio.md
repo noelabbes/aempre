@@ -1,10 +1,41 @@
 # Arquitectura de Negocio (Business Architecture)
 
-Este documento contiene la representación de los procesos de negocio objetivo (TO-BE) para el sistema SIPBA, enfocándose en la interacción entre los actores clave para mitigar el fraude de identidad.
+Este documento contiene la representación de los procesos de negocio tanto en su estado actual (AS-IS) como en el objetivo (TO-BE), permitiendo un análisis de brechas claro para el sistema SIPBA.
 
-## 1. Diagrama de Procesos TO-BE (SIPBA Hub Transaccional)
+## 1. Escenario Actual (AS-IS): Procesos Fragmentados
+En el modelo actual, la falta de un Hub centralizado genera silos de información y latencias críticas de hasta 24 horas.
 
-El siguiente diagrama ilustra el flujo de negocio central, donde Osiptel actúa como un Hub que orquesta la validación de identidad y el bloqueo inmediato de líneas.
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as Usuario/Ciudadano
+    participant O as Operadora (Silo)
+    participant R as RENIEC
+    participant S as Osiptel (RENTESEG)
+    participant P as PNP (Denuncias)
+
+    Note over U, O: Activación Vulnerable
+    U->>O: Solicita línea (Punto ambulatorio)
+    O->>O: Validación Local (Vulnerable/Manual)
+    O->>R: Consulta DNI (Opcional/Offline)
+    R-->>O: Respuesta
+    O-->>U: Activación de Línea (Inmediata)
+    O->>S: Reporte de Altas (Batch / 24-48h)
+
+    Note over P, O: Bloqueo Reactivo (Latencia 24h)
+    U->>P: Denuncia Suplantación
+    P->>P: Proceso Administrativo Manual
+    P-->>U: Entrega Copia de Denuncia
+    Note right of P: Falta de conexión técnica con Osiptel
+    U->>O: Presenta Denuncia físicamente (opcional)
+    S->>S: Consolida información (Lento)
+    S->>O: Notifica Bloqueo (Lista Negra Batch)
+    O->>O: Ejecuta Bloqueo en Ventana Nocturna
+    Note over O: Fin del Riesgo (Tarde: > 24 horas)
+```
+
+## 2. Escenario Objetivo (TO-BE): SIPBA Hub Transaccional
+El nuevo modelo transforma a Osiptel en un orquestador activo que elimina la latencia y centraliza la seguridad.
 
 ```mermaid
 sequenceDiagram
@@ -39,7 +70,18 @@ sequenceDiagram
     S-->>P: Status: Línea Inhabilitada
 ```
 
-## 2. Descripción de Componentes del Diagrama
+## 3. Comparativa y Gap Analysis (Brechas)
+
+| Característica | Estado Actual (AS-IS) | Estado Objetivo (TO-BE) | Impacto |
+| :--- | :--- | :--- | :--- |
+| **Tiempo de Bloqueo** | ~ 24 Horas (Batch) | < 1 Hora (Real-time) | **Crítico:** Reduce ventana de extorsión. |
+| **Validación Identidad** | Local / Silos | Centralizada en Hub (RENIEC) | **Alto:** Elimina suplantación en puntos de venta. |
+| **Biometría** | Opcional / Sin prueba vida | Obligatoria + Liveness | **Alto:** Garantiza presencia física del titular. |
+| **Rol de Osiptel** | Pasivo (Registro posterior) | Activo (Garante/Orquestador) | **Estratégico:** Control total del ecosistema. |
+| **Integración PNP** | Manual / Papel | API / Eventos Digitales | **Operativo:** Eficiencia en respuesta al crimen. |
+
+## 4. Descripción de Componentes Clave
+... (Resto del documento previo)
 
 | Componente | Función en el Negocio |
 | :--- | :--- |
