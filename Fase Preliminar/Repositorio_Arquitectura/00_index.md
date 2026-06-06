@@ -21,5 +21,8 @@ Este documento sirve como el índice central del Repositorio de Arquitectura, co
 *   [Registro de Decisiones (ADR)](04_Gobernanza/01_decisiones.md)
 *   [Cumplimiento y Métricas (KPIs)](04_Gobernanza/02_metricas.md)
 
+## 5. Referencias y Glosario
+*   [Glosario y Siglas del Proyecto](06_Glosario_y_Siglas.md)
+
 ---
 *Ultima actualización: 05 de Junio de 2026*
