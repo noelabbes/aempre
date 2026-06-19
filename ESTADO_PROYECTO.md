@@ -1,6 +1,6 @@
 # Estado del Proyecto SIPBA: Hoja de Ruta y Brechas de Desarrollo
 
-Este documento resume la estructura de la presentación ejecutiva requerida y el diagnóstico de los artefactos pendientes en el repositorio para cumplir con la entrega final de las fases Preliminar, Visión (A) y Negocio (B).
+Este documento resume la estructura de la presentación ejecutiva requerida y el diagnóstico de los artefactos del repositorio para cumplir con la entrega final de las fases Preliminar, Visión (A) y Negocio (B).
 
 ---
 
@@ -27,27 +27,36 @@ Esta secuencia de diapositivas está diseñada para una exposición de nivel dir
 
 ---
 
-## 2. Artefactos Pendientes de Desarrollo
-Para alcanzar el 100% de cumplimiento con la asignación del profesor, se deben desarrollar los siguientes elementos en el repositorio:
+## 2. Artefactos Desarrollados en el Repositorio
+
+Para cumplir con la entrega de las fases del proyecto, se han desarrollado los siguientes elementos en el repositorio:
 
 ### Fase Preliminar (Completada y Robustecida)
-*   [x] **Principios de Arquitectura:** Documento formal (`03_principios.md`) ampliado con 9 principios (5 originales de seguridad + 4 institucionales de mitigación: Autonomía, Transparencia de Datos, Fiscalización Basada en Riesgos y Enfoque Centrado en Reclamos).
-*   [x] **Capacidad y Metamodelo:** Definición de roles, modelo de madurez, RACI del Comité de AE y metamodelo ampliado con capas estratégicas y de linaje de datos (`01_capacidad.md`, `02_metamodelo.md`).
-*   [x] **Marco de Arquitectura a Medida:** Unificación terminológica a SIPBA, redefinición de alcance a OSIPTEL e integración con SEGDI y PIDE (`Marco de Arquitectura a Medida.md`).
+*   [x] **Principios de Arquitectura:** Documento formal ([03_principios.md](file:///D:/aempre/Fase%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo/03_principios.md)) ampliado con 9 principios (5 originales de seguridad + 4 institucionales de mitigación: Autonomía, Transparencia de Datos, Fiscalización Basada en Riesgos y Enfoque Centrado en Reclamos).
+*   [x] **Capacidad y Metamodelo:** Definición de roles, modelo de madurez, RACI del Comité de AE y metamodelo ampliado con capas estratégicas y de linaje de datos ([01_capacidad.md](file:///D:/aempre/Fase%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo/01_capacidad.md), [02_metamodelo.md](file:///D:/aempre/Fase%20Preliminar/Repositorio_Arquitectura/01_Capacidad_y_Metamodelo/02_metamodelo.md)).
+*   [x] **Marco de Arquitectura a Medida:** Unificación terminológica a SIPBA, redefinición de alcance a OSIPTEL e integración con SEGDI y PIDE ([Marco de Arquitectura a Medida.md](file:///D:/aempre/Fase%20Preliminar/Marco_de_Arquitectura.md/Marco%20de%20Arquitectura%20a%20Medida.md)).
 *   [x] **Repositorio GitHub:** Estructura de carpetas y control de versiones operativo.
 
-### Fase A: Visión de Arquitectura (Casi completada)
-*   [x] **Mapa de Stakeholders (Matriz Poder/Interés):** Documentada con niveles de compromiso y vistas requeridas por actor (RENIEC, PNP, Operadoras).
-*   **Statement of Architecture Work (SoAW):** Pendiente (Contrato de arquitectura y alcance formal).
+### Fase A: Visión de Arquitectura (Completada y Robustecida)
+*   [x] **Mapa de Stakeholders (Matriz Poder/Interés):** Documentada con niveles de compromiso y vistas requeridas por actor (RENIEC, PNP, Operadoras) ([03_stakeholders.md](file:///D:/aempre/Fase%20A/03_stakeholders.md)).
+*   [x] **Statement of Architecture Work (SoAW):** Contrato formal del proyecto SIPBA diseñado, detallando alcance, cronograma y mitigación de riesgos de gobernanza ([05_soaw.md](file:///D:/aempre/Fase%20A/05_soaw.md)).
+*   [x] **Diagrama de Concepto de Solución:** Integrado en la Visión de Arquitectura ([01_vision.md](file:///D:/aempre/Fase%20A/01_vision.md)) detallando la interconexión con RENIEC, PNP y operadoras móviles.
+*   [x] **Modelo de Motivación de Negocio (BMM):** Estructura estratégica con metas, objetivos SMART e influenciadores ([02_bmm.md](file:///D:/aempre/Fase%20A/02_bmm.md)).
 
-### Fase B: Arquitectura de Negocio (Fase Crítica - Pendiente)
-*   **Catálogo de Organización:** Descripción de las unidades de Osiptel que operarán el SIPBA (Matriz RACI extendida).
-*   **Modelado de Procesos (BPMN/Texto):**
-    *   Proceso de Activación con Biometría (TO-BE).
-    *   Proceso de Denuncia e Instrucción de Bloqueo (Interacción PNP-SIPBA).
-    *   Proceso de Sanción Automática a Distribuidores.
-*   **Catálogo de Requerimientos de Negocio:** Lista priorizada de funciones solicitadas por los usuarios finales (Osiptel/PNP).
-*   **Gap Analysis de Negocio:** Cuadro comparativo formal de las capacidades de negocio actuales vs. las futuras.
+### Fase B: Arquitectura de Negocio (Completada y Robustecida)
+*   [x] **Catálogo de Organización:** Descripción de las unidades de Osiptel que operarán el SIPBA, con mapeo de actores y matriz RACI de procesos ([02_catalogo_organizacion.md](file:///D:/aempre/Fase%20B/02_catalogo_organizacion.md)).
+*   [x] **Modelado de Procesos (BPMN/Texto):**
+    *   [x] Proceso de Activación con Biometría (TO-BE) ([01_procesos_negocio.md#L9-L43](file:///D:/aempre/Fase%20B/01_procesos_negocio.md#L9-L43)).
+    *   [x] Proceso de Denuncia e Instrucción de Bloqueo (Interacción PNP-SIPBA) ([01_procesos_negocio.md#L45-L77](file:///D:/aempre/Fase%20B/01_procesos_negocio.md#L45-L77)).
+    *   [x] Proceso de Sanción Automática a Distribuidores ([01_procesos_negocio.md#L79-L113](file:///D:/aempre/Fase%20B/01_procesos_negocio.md#L79-L113)).
+*   [x] **Catálogo de Requerimientos de Negocio:** Lista priorizada de funciones y requerimientos de calidad (SLA, seguridad, LPDP) solicitadas por los usuarios y sistemas ([03_requerimientos_negocio.md](file:///D:/aempre/Fase%20B/03_requerimientos_negocio.md)).
+*   [x] **Gap Analysis de Negocio:** Cuadro comparativo de las capacidades y brechas de negocio AS-IS vs. TO-BE (capacidades añadidas, eliminadas o modificadas) e impacto de la transición ([04_gap_analysis_negocio.md](file:///D:/aempre/Fase%20B/04_gap_analysis_negocio.md)).
+
+### Fase C: Arquitecturas de Sistemas de Información (Planificada - En Cola)
+*   [x] **Modelo de Trabajo y Plan de Entregables:** Roadmap de diseño para Datos, Aplicaciones e Interfaces de Integración ([00_plan_fase_c.md](file:///D:/aempre/Fase%20C/00_plan_fase_c.md)).
+*   **Arquitectura de Datos:** Catálogo de entidades, estándares de protección LPDP y linaje de datos sectoriales (Pendiente).
+*   **Arquitectura de Aplicaciones:** Catálogo de portafolio, mapa lógico y desacoplamiento de API Gateway (Pendiente).
+*   **Interfaces de Integración:** Especificación técnica de contratos de APIs (RENIEC, PNP y Operadoras) (Pendiente).
 
 ---
-*Nota: Se recomienda crear la carpeta `05_Arquitectura_Negocio` para iniciar con estos desarrollos.*
+*Nota: Todos los desarrollos se organizan en sus respectivas carpetas raíz (`/Fase Preliminar/`, `/Fase A/`, `/Fase B/` y `/Fase C/`).*
