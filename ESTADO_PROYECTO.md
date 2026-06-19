@@ -30,9 +30,10 @@ Esta secuencia de diapositivas está diseñada para una exposición de nivel dir
 ## 2. Artefactos Pendientes de Desarrollo
 Para alcanzar el 100% de cumplimiento con la asignación del profesor, se deben desarrollar los siguientes elementos en el repositorio:
 
-### Fase Preliminar (Completada)
-*   [x] **Principios de Arquitectura:** Documento formal con los 5 principios rectores (`03_principios.md`): Seguridad, Privacidad, Interoperabilidad, Cooperación y Rendimiento.
-*   [x] **Capacidad y Metamodelo:** Definición de roles y estándares de gobernanza (`01_capacidad.md`, `02_metamodelo.md`).
+### Fase Preliminar (Completada y Robustecida)
+*   [x] **Principios de Arquitectura:** Documento formal (`03_principios.md`) ampliado con 9 principios (5 originales de seguridad + 4 institucionales de mitigación: Autonomía, Transparencia de Datos, Fiscalización Basada en Riesgos y Enfoque Centrado en Reclamos).
+*   [x] **Capacidad y Metamodelo:** Definición de roles, modelo de madurez, RACI del Comité de AE y metamodelo ampliado con capas estratégicas y de linaje de datos (`01_capacidad.md`, `02_metamodelo.md`).
+*   [x] **Marco de Arquitectura a Medida:** Unificación terminológica a SIPBA, redefinición de alcance a OSIPTEL e integración con SEGDI y PIDE (`Marco de Arquitectura a Medida.md`).
 *   [x] **Repositorio GitHub:** Estructura de carpetas y control de versiones operativo.
 
 ### Fase A: Visión de Arquitectura (Casi completada)
