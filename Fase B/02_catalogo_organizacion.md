@@ -64,3 +64,66 @@ El negocio de SIPBA se rige por un esquema de gobernanza ágil y blindado técni
 1.  **Modificación de Reglas de Negocio:** Si la GPRC determina que el límite de 7 líneas por titular debe reducirse debido a nuevas modalidades de fraude, eleva el requerimiento al Comité de AE. La GTIC programa la nueva directiva directamente en el motor de reglas de SIPBA.
 2.  **Incidentes de Datos e Inconsistencias:** Si se detectan caídas inexplicadas de líneas reportadas por operadoras (ej. WOW en 2026), el Analista de Datos de GTIC emite una alerta de linaje de datos. GFS toma control del caso e inicia auditorías de gabinete contra el operador, aplicando sanciones de comprobarse distorsión de información.
 3.  **Auditoría de Contingencias de RENIEC:** Si el Web Service de RENIEC experimenta caídas prolongadas, el Administrador de GTIC activa el "Shadow Mode" del Hub. Esto encola las activaciones de forma temporal y notifica de inmediato a la GFS para fiscalización física de distribuidores, evitando parálisis comerciales pero manteniendo trazabilidad estricta.
+
+---
+
+## 5. Rediseño Organizacional de la GFS: De Campo a Inteligencia Analítica
+
+La adopción de la fiscalización basada en riesgos impulsada por la **OCDE (PAFER)** exige transformar la estructura y competencias de la Gerencia de Supervisión y Fiscalización (GFS) de OSIPTEL.
+
+### 5.1. Evolución de Perfiles y Competencias (AS-IS vs. TO-BE)
+
+| Dimensión | Enfoque Tradicional (AS-IS) | Enfoque Basado en Riesgos (TO-BE) | Impacto en Capacidad Organizativa |
+| :--- | :--- | :--- | :--- |
+| **Perfil del Inspector** | Inspector generalista de campo centrado en legalidades y revisión física de puntos de venta. | **Analista Forense de Datos** y **Supervisor de Riesgo Digital**. | Transición de inspección administrativa a peritaje informático y analítico. |
+| **Herramientas de Trabajo** | Actas físicas, plantillas Excel manuales y visitas aleatorias no coordinadas. | Tableros analíticos en Grafana, análisis de logs de Spark y consolas de monitoreo en tiempo real. | Digitalización al 100% de la evidencia. Reducción de costos de traslado. |
+| **Criterio de Fiscalización** | Muestreo aleatorio o reactivo ante denuncias del usuario (inspecciones lentas). | **Score de Riesgo del Distribuidor** calculado por el pipeline ETL de SIPBA. | Focalización en el 5% de puntos de venta con alta probabilidad de fraude masivo. |
+| **Naturaleza de la Acción** | Punitiva tardía (procesos sancionadores administrativos de 6 a 18 meses). | Preventiva inmediata y automatizada (bloqueo de accesos y alertas proactivas). | Mitigación del delito en minutos. Co-creación de cumplimiento con operadoras. |
+
+### 5.2. Nuevas Funciones Operativas en la GFS
+
+Para operar el SIPBA, se definen dos nuevos roles analíticos en la estructura orgánica de la GFS:
+
+#### A. Analista Forense de Datos (Data Forensic Analyst)
+*   **Misión:** Auditar la consistencia entre las altas reales de las operadoras y las aprobaciones transaccionales de SIPBA.
+*   **Responsabilidades:**
+    *   Supervisar la ejecución diaria del pipeline `SIPBA-ETL`.
+    *   Investigar los reportes de `ALTA_SOSPECHOSA` y auditar las coordenadas GPS reportadas por las operadoras.
+    *   Analizar patrones de transacciones fallidas consecutivas en el clúster Redis para identificar campañas automatizadas de fuerza bruta contra el liveness biométrico.
+
+#### B. Supervisor de Riesgo Digital (Digital Risk Supervisor)
+*   **Misión:** Orquestar y fiscalizar el comportamiento del canal de distribuidores autorizados en el mercado.
+*   **Responsabilidades:**
+    *   Gestionar y verificar la lista negra de distribuidores y la correcta aplicación del "Strike System".
+    *   Auditar las justificaciones técnicas emitidas por las operadoras durante los pases de contingencia (RENIEC offline).
+    *   Coordinar con la PNP (DIVINDAT) y el Ministerio Público el envío de evidencia digital criptográfica firmada por el HSM de OSIPTEL para procesos penales.
+
+### 5.3. Flujo de Trabajo de Fiscalización Basada en Riesgos (Automated Alerts)
+
+El siguiente flujo ilustra cómo el sistema SIPBA reduce drásticamente el tiempo de intervención de la GFS frente a malas prácticas del distribuidor:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant D as Distribuidor (Fraude)
+    participant Core as SIPBA-CORE (Reglas/Redis)
+    participant ETL as SIPBA-ETL (Analítica Spark)
+    participant GFS as GFS (Analistas OSIPTEL)
+    participant OP as Operadora Móvil
+
+    D->>Core: Intento de Activación (DNI usurpado / Biometría Falsa)
+    Core-->>D: Intento Fallido (Biometría no coincide < 80%)
+    D->>Core: Reintento 2 y 3 (Fuerza bruta con fotos estáticas)
+    Core-->>Core: Redis registra 3 fallos consecutivos en 10 min
+    Core->>Core: Cambia estado de Distribuidor a "SANCIONADO" en Redis
+    Core->>OP: Orden Automática de Suspensión de Accesos
+    Core->>ETL: Encolar Alerta de Strike 3
+    ETL->>GFS: Generar Alerta Crítica en el Dashboard de Riesgos
+    GFS->>OP: Notificar inicio de expediente sancionador (Evidencia HSM)
+```
+
+### 5.4. Plan de Capacitación y Gestión del Cambio
+Para habilitar a los fiscalizadores de campo actuales de OSIPTEL en los nuevos perfiles analíticos, se establece una hoja de ruta de habilitación:
+1.  **Módulo 1: Fundamentos de Ciberseguridad e Identidad Digital (Meses 1-2):** Capacitación en mTLS, llaves públicas/privadas, firmas digitales de no repudio y LPDP peruana.
+2.  **Módulo 2: Herramientas de Inteligencia de Datos (Meses 3-5):** Capacitación avanzada en consultas SQL, interpretación de pipelines Apache Spark, uso de orquestadores Airflow y diseño de consultas en Grafana/Kibana.
+3.  **Módulo 3: Protocolos Forenses y Evidencia Digital (Meses 6-8):** Normativa legal para la custodia de logs digitales y cadena de custodia de metadatos firmados por HSM ante la fiscalía.

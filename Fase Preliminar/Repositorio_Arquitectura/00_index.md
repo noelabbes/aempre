@@ -18,15 +18,19 @@ Este documento sirve como el índice central del Repositorio de Arquitectura, co
 ## 3. Arquitectura de Negocio (Business Architecture)
 *   [Modelado de Procesos (TO-BE / AS-IS)](../../Fase%20B/01_procesos_negocio.md)
 
-## 4. Paisaje y Arquitecturas de Referencia
+## 4. Arquitectura de Sistemas de Información (Information Systems Architecture)
+*   [Modelo de Trabajo y Plan de Entregables](../../Fase%20C/00_plan_fase_c.md)
+*   [Arquitectura de Datos (Catálogos y LPDP)](../../Fase%20C/01_arquitectura_datos.md)
+
+## 5. Paisaje y Arquitecturas de Referencia
 *   [Paisaje de Arquitectura (Landscape)](03_Paisaje_y_Referencia/01_paisaje.md)
 *   [Biblioteca de Referencia (Reference Library)](03_Paisaje_y_Referencia/02_referencia.md)
 
-## 5. Registro de Gobernanza
+## 6. Registro de Gobernanza
 *   [Registro de Decisiones (ADR)](04_Gobernanza/01_decisiones.md)
 *   [Cumplimiento y Métricas (KPIs)](04_Gobernanza/02_metricas.md)
 
-## 6. Referencias y Glosario
+## 7. Referencias y Glosario
 *   [Glosario y Siglas del Proyecto](06_Glosario_y_Siglas.md)
 
 ---
