@@ -1,6 +1,4 @@
-  Para evitar que el profesor perciba el proyecto como "solo un aplicativo intermediario o un reordenamiento de
-  procesos", debemos elevar la narrativa hacia una transformación de capacidades de la Arquitectura Empresarial
-  (AE), alineada con los desafíos reales de OSIPTEL y las recomendaciones de la OCDE (2023).
+  Para evitar que el profesor perciba el proyecto como "solo un aplicativo intermediario o un reordenamiento de procesos", debemos elevar la narrativa hacia una transformación de capacidades de la Arquitectura Empresarial (AE), alineada con los desafíos reales de OSIPTEL y las recomendaciones de la OCDE (2023).
 
   Aquí te presento cómo conectar el SIPBA con los problemas sistémicos de desafíos_actuales_osiptel.md y qué preguntas estratégicas debemos plantear para robustecer transversalmente el proyecto.
   ──────
